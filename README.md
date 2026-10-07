@@ -48,13 +48,13 @@ source("analysis/04_cascade.R")
 Required R packages: `RDS`, `metafor`, `survey`, `sandwich`, `lmtest`, `geepack`, `dplyr`, `rio`.
 
 ## Data
-
-The analytic file is the BBS-PWID II dataset restricted to the variables used here (HIV/HBV/HCV results, recruiter IDs, reported network size, and covariates). It is not posted because it contains individual-level information on a criminalized key population. Access is through the Instituto Nacional de Saúde, Mozambique.
+We do not include the  survey data. Nevertheless, it can be ccess is through the Instituto Nacional de Saúde, Mozambique via https://ins.gov.mz/institucional/unidade-organicas/direccoes/directora-de-inqueritos-e-observacao-de-saude/solicitacao-de-dados/ 
 
 City PWID size estimates used for Gile SS (Maputo, Beira, Tete, Quelimane, Nampula):
-
+The  Gile SS requires population size to be known. we use the following values for each of the provinces, which  were estimated using   Sequential Sampling - Population Size Estimate:
 `990, 1029, 3219, 681, 1792`
 
+Note that this values correpond to the  estimate of the PWID and we use them as input in the RDS function while subsetting for female individuals. 
 ## Repository layout
 
 ```
@@ -71,4 +71,5 @@ run_all.R
 
 ## Original working scripts
 
-The exploratory local scripts (`ANALISES_WWID_AURIA.R`, `AURIA_ANALISE.R`, `MetaAnalysis.R`, `METANALYSIS_FUN.R`) contain the same estimators plus unused sensitivity runs (full-sample vs subset weights, homophily, toy RDS). This repository keeps only the code needed to reproduce the paper tables.
+The exploratory local scripts (`ANALISES_WWID_AURIA.R`, `AURIA_ANALISE.R`, `MetaAnalysis.R`, `METANALYSIS_FUN.R`) contain the same estimators plus unused sensitivity runs (full-sample vs subset weights, homophily). This repository keeps only the code needed to reproduce the paper tables.
+
